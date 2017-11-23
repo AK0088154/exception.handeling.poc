@@ -12,8 +12,6 @@ scotchApp.controller("mainController", function($scope, $exceptionHandler) {
     $scope.getStudent = function() {
         $http.get("/getdata").then(onSuccess, onError);
     };
-    $scope.throwExpt = function() {
-        throw new Error("mainController: An Error Occured1");
-    };
+
     $scope.emessages = ['Exception', 'info', 'Fatal', 'debug'];    
 });
