@@ -1,72 +1,62 @@
 <!DOCTYPE html>
-
 <!-- define angular app -->
 <html ng-app="scotchApp">
 
 <head>
-  <!-- SCROLLS -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-  <link rel="stylesheet" href="style/main.css" />
-
-  <!-- SPELLS -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-  <script src="js/script.js"></script>
-  
-
-  
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <!-- SPELLS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/contact.js"></script>
 </head>
-
 <!-- define angular controller -->
+
 <body ng-controller="mainController">
-
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Application Logging View</a>
-      </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-      </ul>
+    <!-- TOP NAVIGATION B -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Application Logging View</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- TOP NAVIGATION E -->
+    <!-- LEFT NAVIGATION B -->
+    <div class="sidenav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a><br/><br/>
     </div>
-  </nav>
-  
- <div class="sidenav">
-  <a href="#">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a><br/><br/>
- </div>
-
- <div class="sidenavRight">
-   <!-- <ng-repeat="x in messages">
-      <a href="#">{{ x }}</a>      
-   </ng-repeat> -->
-  <a href="#">Exception</a>
-  <a href="#">info</a>
-  <a href="#">Fatal</a>
-  <a href="#">debug</a>
-</div>
- 
-  <div id="main" class="main">
-  
-    <!-- angular templating -->
-		<!-- this is where content will be injected -->
-    <div ng-view></div>
-    
-  </div>
-  
-  <footer class="text-center footer">
-    <p>View the tutorial on <a href="#">CopyRight</a></p>
-  
-    <p>View a <a href="#">Angular Single Page App</a></p>
-  </footer>
-  
+    <!-- LEFT NAVIGATION E -->
+    <!-- SIDE NAVIGATION B -->
+    <div class="sidenavRight">
+        <div ng-repeat="x in emessages">
+            <a href="#">{{ x }}</a>
+        </div>
+    </div>
+    <!-- SIDE NAVIGATION E -->
+    <div id="main" class="main">
+        <div ng-view></div>
+    </div>
+    <!-- FOOTER B -->
+    <footer class="text-center footer">
+        <p>View the tutorial on <a href="#">CopyRight</a></p>
+        <p>View a <a href="#">Angular Single Page App</a></p>
+    </footer>
+    <!-- FOOTER E -->
 </body>
 
 </html>
