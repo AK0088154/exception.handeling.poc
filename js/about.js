@@ -17,10 +17,6 @@ scotchApp.controller("aboutController", function($scope, $exceptionHandler) {
     };
 
     $scope.throwExpt = function() {
-        try {
-            throw new Error("An Error Occured2");
-        } catch (except) {
-            $exceptionHandler(except, " : Button was Pressed2");
-        }
+        throw new Error("aboutController : An Error Occured");
     }
 });

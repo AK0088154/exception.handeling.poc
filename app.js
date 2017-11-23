@@ -2,8 +2,9 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 scotchApp.service('mylogservice', function() {
     this.myuserlog = function(message, cause) {
-        alert('Something went wrong, contact your admin: ' + message)
-        ///$scope.emessages.push('AKP thru Service:');
+        alert('Something went wrong, contact your admin.')
+        alert(message);
+        alert(cause);
     }
 });
 

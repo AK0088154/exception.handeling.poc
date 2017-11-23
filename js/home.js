@@ -4,7 +4,6 @@ scotchApp.controller("mainController", function($scope, $exceptionHandler) {
     var onSuccess = function(response) {
         $scope.status = response.status;
         $scope.data = response.data;
-
     };
     var onError = function(response) {
         $scope.status = response.status;
@@ -14,11 +13,7 @@ scotchApp.controller("mainController", function($scope, $exceptionHandler) {
         $http.get("/getdata").then(onSuccess, onError);
     };
     $scope.throwExpt = function() {
-        try {
-            throw new Error("An Error Occured1");
-        } catch (except) {
-            $exceptionHandler(except, " : Button was Pressed1");
-        }
+        throw new Error("mainController: An Error Occured1");
     };
     $scope.emessages = ['Exception', 'info', 'Fatal', 'debug'];    
 });
