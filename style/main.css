@@ -21,7 +21,8 @@
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: rgb(62, 12, 242);
+    background-color: #4CAF50;
 }
 
 .main {
@@ -56,14 +57,23 @@
 
 .sidenavRight a:hover {
     color: #f1f1f1;
+    background-color: #4CAF50;
 }
 
 .footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 73%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+  margin-left: 200px; /* Same as the width of the sidenav */
+  height: 100px;
+  background-color: hsl(0, 5%, 35%);
 }
-
+.navbar  {
+    position: absolute;
+    width: 73%;
+    height: 60px;
+    background-color: #0a0a0a;
+    color: white;
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
