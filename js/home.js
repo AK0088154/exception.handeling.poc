@@ -12,6 +12,6 @@ scotchApp.controller("mainController", function($scope, $exceptionHandler) {
     $scope.getStudent = function() {
         $http.get("/getdata").then(onSuccess, onError);
     };
-
-    $scope.emessages = ['Exception', 'info', 'Fatal', 'debug'];    
+    $scope.errormsgs = ['Abc error'];        
+    $scope.emessages = ['Exception', 'Info', 'Fatal', 'Debug'];    
 });

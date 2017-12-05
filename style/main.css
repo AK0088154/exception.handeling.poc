@@ -1,69 +1,55 @@
-@CHARSET "ISO-8859-1";
-
-.sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:#D3D3D3;
-    overflow-x: hidden;
-    padding-top: 80px;
-}
-
-.sidenav a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-/*right side nav*/
-.sidenavRight {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 86%;
-    background-color:#D3D3D3;
-    overflow-x: hidden;
-    padding-top: 80px;
-}
-
-.sidenavRight a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #818181;
-    display: block;
-}
-
-.sidenavRight a:hover {
-    color: #f1f1f1;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    /* Set position of top nav bar to right */
+    .navbar-nav{
+        float:right;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 520px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+      
+       /* Set position of top nav bar to none */
+      .navbar-nav{
+        float:none;
+        }
+    }
+    /* Set Style of left and right nav bar */
+    .sidenav ul{
+        list-style-type:none;
+        padding: 0px;
+    }
+    .sidenav li{
+        list-style-type:none;
+        padding: 10px 0px 5px 10px;
+        text-align: left;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .sidenav li:hover{
+    background: #d2d2d2;
+    }
+/* End */
